@@ -11,8 +11,13 @@ import { ref, onMounted } from 'vue'
 
 export default{
     setup(){
-        const keys = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-        const keyLetters = ['q', '2','w', '3', 'e', 'r', '5', 't', '6', 'y', '7', 'u'];
+        const keys = ['C4', 'C#4', 'D4', 'D#4', 'E4', 'F4', 'F#4', 'G4', 'G#4', 'A4', 'A#4', 'B4',
+            'C5', 'C#5', 'D5', 'D#5', 'E5', 'F5', 'F#5', 'G5', 'G#5', 'A5', 'A#5', 'B5'
+        ];
+        const keyLetters = [
+            'z', 's', 'x', 'd', 'c', 'v', 'g', 'b', 'h', 'n', 'j', 'm',
+            'q', '2','w', '3', 'e', 'r', '5', 't', '6', 'y', '7', 'u'
+            ];
 
         const pressed = ref([]);
         
@@ -36,8 +41,7 @@ export default{
 
 <style lang="scss" scopped> 
     .keyboard{
-        background-color: white;
-        width: 300px;
+        width: fit-content;
         display: flex;
         position: relative;
         margin: auto auto
